@@ -34,29 +34,29 @@ function TechStack() {
     { icon: Moq, name: "Moq" },
   ];
 
-  // Duplicate the array to create a seamless loop
+  // Duplicate the array for infinite scrolling
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="py-12 overflow-hidden text-white">
+    <div className="py-12 text-white">
       {/* Section Title */}
       <h2 className="text-3xl font-bold text-center mb-8">Tech Stack</h2>
 
       {/* Infinite Scrolling Container */}
-      <div className="relative w-full overflow-hidden">
+      <div className="overflow-hidden">
         {/* Scrolling Cards */}
-        <div className="flex animate-infinite-scroll">
+        <div className="flex animate-infinite-scroll space-x-4">
           {duplicatedTechStack.map((tech, index) => (
             <div
               key={index}
-              className="bg-sky-900 flex-shrink-0 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center mx-4 p-6 transform transition-transform hover:scale-105"
+              className="bg-sky-900 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center p-6 transform transition-transform hover:scale-105"
             >
               <img
                 src={tech.icon}
                 alt={tech.name}
-                className="mx-auto object-contain"
+                className="w-16 h-16 object-contain"
               />
-              <p className="text-lg font-semibold">{tech.name}</p>
+              <p className="text-lg font-semibold mt-2">{tech.name}</p>
             </div>
           ))}
         </div>

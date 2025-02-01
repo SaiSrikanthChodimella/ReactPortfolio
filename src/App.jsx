@@ -15,7 +15,7 @@ import Education from "./Pages/Education.jsx";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/ReactPortfolio">
       <MainLayout>
         <Navbar />
         <div className="p-6 rounded-lg shadow-md">
@@ -30,25 +30,12 @@ const App = () => {
               path="/"
               element={
                 <>
-                  <div className="container mx-auto">
-                    <AboutMe />
-                  </div>
-
-                  <div className="container mx-auto px-6 py-12">
-                    <WorkExperience />
-                  </div>
-                  <div className="container mx-auto px-6 py-12">
-                    <Skills />
-                  </div>
-                  <div className="container mx-auto px-6 py-12">
-                    <Certifications />
-                  </div>
-                  <div className="container mx-auto px-6 py-12">
-                    <Projects />
-                  </div>
-                  <div className="container mx-auto px-6 py-12">
-                    <Education />
-                  </div>
+                  <AboutMe />
+                  <WorkExperience />
+                  <Skills />
+                  <Certifications />
+                  <Projects />
+                  <Education />
                 </>
               }
             />

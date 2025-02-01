@@ -59,20 +59,18 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-4">
             {navigation.map((item, idx) => (
               <NavLink
                 key={idx}
                 to={item.path}
                 className={({ isActive }) =>
-                  `relative text-gray-700 hover:text-blue-600 transition duration-300 ${
-                    isActive ? "font-semibold text-blue-600" : ""
+                  `px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 ${
+                    isActive ? "font-semibold bg-blue-50 text-blue-600" : ""
                   }`
                 }
               >
                 {item.title}
-                {/* Hover underline effect */}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </NavLink>
             ))}
           </div>
@@ -90,7 +88,7 @@ const Navbar = () => {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 ${
+                    `block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-lg ${
                       isActive ? "font-semibold bg-blue-50 text-blue-600" : ""
                     }`
                   }
