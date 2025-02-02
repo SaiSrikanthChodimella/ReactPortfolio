@@ -1,112 +1,117 @@
 import Monsters from "../assets/Project.png";
 import UnderGoing from "../assets/Under_Construction.png";
+import Resume from "../assets/Resume.png";
 
 function Projects() {
   return (
     <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg text-white transform transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
 
-      {/* Dashboard Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Project Monster Builder */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 bento-box">
-          <img
-            src={Monsters}
-            alt="Project Monster Builder"
-            className="w-full h-48 object-cover bento-box"
-          />
-          <div className="p-6 bento-box">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">
-              Project Monster Builder
-            </h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Currently optimizing application performance and testing new UI
-              component libraries.
-            </p>
-            <ul className="space-y-2 text-gray-700 mb-6">
-              <li>
-                <span className="text-indigo-600">•</span>
-                Developed <strong>RESTful API</strong> for backend and a{" "}
-                <strong>Blazor</strong> web app with <strong>Bootstrap</strong>{" "}
-                for frontend UI/UX.
-              </li>
-              <li>
-                <span className="text-indigo-600">•</span>
-                Built APIs with <strong>ASP.NET Core Minimal API</strong>.
-              </li>
-              <li>
-                <span className="text-indigo-600">•</span>
-                Implemented <strong>Unit</strong> and{" "}
-                <strong>Integration</strong> tests using <strong>xUnit</strong>{" "}
-                and <strong>Moq</strong>.
-              </li>
-              <li>
-                <span className="text-indigo-600">•</span>
-                Integrated <strong>OAuth 2.0</strong> and{" "}
-                <strong>OpenID</strong> for Authentication/Authorization.
-              </li>
-              <li>
-                <span className="text-indigo-600">•</span>
-                Used <strong>Entity Framework Core</strong> for{" "}
-                <strong>Azure SQL Database</strong>.
-              </li>
-            </ul>
-            <div className="flex gap-4">
-              <a
-                href="https://dev.azure.com/srikanthchodimella/MonsterBuilder"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors bento-box"
-              >
-                Project Repo Link
-              </a>
-              <a
-                href="https://monsterbuildermanager.azurewebsites.net"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors bento-box"
-              >
-                Monster Builder Page
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* New Project Coming Soon */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 bento-box">
-          <img
-            src={UnderGoing}
-            alt="Under Construction"
-            className="w-full h-48 object-cover bento-box"
-          />
-          <div className="p-6 bento-box">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">
-              New Project Coming Soon
-            </h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Currently in development phase.
-            </p>
-            <div className="space-y-4">
-              <h5 className="text-lg font-semibold text-gray-700">
-                Stay tuned for updates!
-              </h5>
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <span className="text-indigo-600">•</span>
-                  Exciting new features on the way.
-                </li>
-                <li>
-                  <span className="text-indigo-600">•</span>
-                  Optimizing current development processes.
-                </li>
-                <li>
-                  <span className="text-indigo-600">•</span>
-                  New UI/UX features being designed.
-                </li>
+      {/* Horizontal Scrollable Container */}
+      <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-800">
+        {[
+          {
+            img: Monsters,
+            title: "Project Monster Builder",
+            description:
+              "Currently optimizing application performance and testing new UI component libraries.",
+            details: [
+              "Developed RESTful API for backend and a Blazor web app with Bootstrap for frontend UI/UX.",
+              "Built APIs with ASP.NET Core Minimal API.",
+              "Implemented Unit and Integration tests using xUnit and Moq.",
+              "Integrated OAuth 2.0 and OpenID for Authentication/Authorization.",
+              "Used Entity Framework Core for Azure SQL Database.",
+            ],
+            links: [
+              {
+                text: "Project Repo",
+                href: "https://dev.azure.com/srikanthchodimella/MonsterBuilder",
+                color: "blue",
+              },
+              {
+                text: "Live Page",
+                href: "https://monsterbuildermanager.azurewebsites.net",
+                color: "green",
+              },
+            ],
+          },
+          {
+            img: Resume,
+            title: "Portfolio Web Page in .NET Ecosystem",
+            description:
+              "Utilized Microsoft Technologies to build this Portfolio Web Page.",
+            details: [
+              "Utilized Bootstrap for quick and responsive design.",
+              "Utilized Animate.CSS for smooth animations.",
+              "Sourcecode hosted on Azure DevOps.",
+              "Deployed on Azure App Service.",
+            ],
+            links: [
+              {
+                text: "Portfolio Repo",
+                href: "https://dev.azure.com/srikanthchodimella/MonsterBuilder/_git/Portfolio%20WebSite",
+                color: "blue",
+              },
+              {
+                text: "Live Page",
+                href: "https://saisrikanthchodimella.azurewebsites.net/",
+                color: "green",
+              },
+            ],
+          },
+          {
+            img: UnderGoing,
+            title: "New Project Coming Soon",
+            description: "Currently in development phase.",
+            details: [
+              "Exciting new features on the way.",
+              "Optimizing current development processes.",
+              "New UI/UX features being designed.",
+            ],
+            links: [],
+          },
+        ].map((project, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-full sm:w-80 md:w-96 bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 flex flex-col"
+          >
+            <img
+              src={project.img}
+              alt={project.title}
+              className="w-full h-48 object-cover bento-box"
+            />
+            <div className="p-6 flex-grow flex flex-col">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                {project.description}
+              </p>
+              <ul className="space-y-2 text-gray-700 flex-grow">
+                {project.details.map((detail, i) => (
+                  <li key={i}>
+                    <span className="text-indigo-600">•</span> {detail}
+                  </li>
+                ))}
               </ul>
+              {project.links.length > 0 && (
+                <div className="flex justify-center gap-4 mt-4">
+                  {project.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-${link.color}-600 rounded-md hover:bg-${link.color}-700 transition-colors`}
+                    >
+                      {link.text}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
