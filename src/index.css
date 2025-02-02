@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Keyframes */
 @keyframes infinite-scroll {
   0% {
     transform: translateX(0);
@@ -9,6 +10,18 @@
   }
 }
 
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animations */
 .animate-infinite-scroll {
   animation: infinite-scroll 25s linear infinite;
   display: flex;
@@ -40,17 +53,7 @@
 .bento-box:nth-child(5) {
   animation-delay: 1s;
 }
+
 .bento-box:nth-child(6) {
   animation-delay: 1s;
-}
-
-@keyframes fallIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
