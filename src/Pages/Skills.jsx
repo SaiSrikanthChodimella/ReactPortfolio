@@ -51,7 +51,7 @@ function SkillsSection() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-6">
@@ -63,7 +63,7 @@ function SkillsSection() {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className="bg-sky-900 rounded-lg shadow-md transition-shadow hover:shadow-lg"
+              className="bg-sky-900 rounded-lg shadow-md transition-shadow hover:shadow-lg bento-box"
             >
               {/* Skill Header */}
               <button

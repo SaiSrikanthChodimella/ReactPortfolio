@@ -3,18 +3,18 @@ import GITAM from "../assets/GitamLogo.jpg";
 
 function Education() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-8">
         Education
       </h2>
 
       {/* FAU University Card */}
-      <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform hover:scale-105 mb-8">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform hover:scale-105 mb-8 bento-box">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bento-box">
+          <div className="flex flex-col lg:flex-row items-center gap-8 bento-box">
             {/* Image */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 bento-box">
               <img
                 src={FAU}
                 alt="FAU University"
@@ -61,11 +61,11 @@ function Education() {
       </div>
 
       {/* GITAM University Card */}
-      <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform hover:scale-105">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform hover:scale-105 bento-box">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bento-box">
+          <div className="flex flex-col lg:flex-row items-center gap-8 bento-box">
             {/* Text Content */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className="w-full lg:w-1/2 text-center lg:text-left bento-box">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
                 GITAM University
               </h2>
@@ -100,7 +100,7 @@ function Education() {
             </div>
 
             {/* Image */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 bento-box">
               <img
                 src={GITAM}
                 alt="GITAM University"

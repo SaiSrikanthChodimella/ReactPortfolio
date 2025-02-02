@@ -11,21 +11,21 @@ export default function AboutMe() {
           <img
             src={myImage}
             alt="Sai Srikanth Chodimella"
-            className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2"
+            className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2 bento-box"
           />
         </div>
 
         {/* Right Section: Expanded Bento Box Layout */}
         <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Name Title */}
-          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2">
+          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2 bento-box">
             <h1 className="text-3xl md:text-4xl font-extrabold text-white">
               Sai Srikanth Chodimella
             </h1>
           </div>
 
           {/* About Me */}
-          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
+          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl bento-box">
             <h2 className="text-xl md:text-2xl font-bold text-indigo-100 mb-4">
               About Me
             </h2>
@@ -42,7 +42,7 @@ export default function AboutMe() {
           </div>
 
           {/* Key Skills */}
-          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
+          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl bento-box">
             <h3 className="text-xl md:text-2xl font-semibold text-indigo-100 mb-4">
               Key Skills:
             </h3>
@@ -71,7 +71,7 @@ export default function AboutMe() {
           </div>
 
           {/* Call-to-Action Buttons */}
-          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2">
+          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2 bento-box">
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="https://www.linkedin.com/in/sai-srikanth-chodimella/"
@@ -103,7 +103,7 @@ export default function AboutMe() {
       </div>
 
       {/* Tech Stack Component */}
-      <div className="mt-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl">
+      <div className="mt-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl bento-box">
         <TechStack />
       </div>
     </div>

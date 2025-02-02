@@ -2,11 +2,11 @@ import Certificate from "../assets/Certification.png";
 
 function Certifications() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Certificate Image */}
-        <div className="flex justify-center">
+        <div className="flex justify-center bento-box">
           <img
             src={Certificate}
             alt="Certification Image"
@@ -15,7 +15,7 @@ function Certifications() {
         </div>
 
         {/* Certification Details */}
-        <div className="space-y-6 text-white">
+        <div className="space-y-6 text-white bento-box">
           {/* Certification Title */}
           <h2 className="text-3xl md:text-4xl font-bold">
             Foundational C# with Microsoft
@@ -31,7 +31,7 @@ function Certifications() {
           </p>
 
           {/* Key Features */}
-          <div className="space-y-4">
+          <div className="space-y-4 bento-box">
             <h3 className="text-xl md:text-2xl font-semibold text-gray-300">
               Key Features:
             </h3>
@@ -46,7 +46,7 @@ function Certifications() {
           </div>
 
           {/* Call-to-Action Button */}
-          <div className="mt-6 flex justify-center md:justify-start">
+          <div className="mt-6 flex justify-center md:justify-start bento-box">
             <a
               href="https://www.freecodecamp.org/certification/Sai_Srikanth_Chodimella/foundational-c-sharp-with-microsoft"
               target="_blank"

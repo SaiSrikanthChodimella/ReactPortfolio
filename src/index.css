@@ -1,16 +1,56 @@
 @import "tailwindcss";
 
 @keyframes infinite-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .animate-infinite-scroll {
-    animation: infinite-scroll 25s linear infinite;
-    display: flex;
-    width: max-content;
+  100% {
+    transform: translateX(-50%);
   }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.bento-box {
+  animation: fallIn 0.5s ease-out forwards;
+  opacity: 0; /* Start with opacity 0 to make them invisible before the animation */
+}
+
+/* Add different delays for each bento box */
+.bento-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.bento-box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.bento-box:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.bento-box:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.bento-box:nth-child(5) {
+  animation-delay: 1s;
+}
+.bento-box:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

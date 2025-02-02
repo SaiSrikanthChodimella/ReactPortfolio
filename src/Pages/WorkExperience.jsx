@@ -3,10 +3,10 @@ import Accenture from "../assets/Accenture.png";
 
 function WorkExperience() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <header className="text-center mb-8 md:mb-12">
+        <header className="text-center mb-8 md:mb-12 bento-box">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             Professional Experience
           </h1>
@@ -56,7 +56,7 @@ function WorkExperience() {
 
 function ExperienceCard({ logo, role, duration, location, points }) {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
+    <div className="bg-white rounded-xl shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg bento-box">
       {/* Card Header */}
       <div className="flex items-center gap-4 mb-4">
         {logo && <img src={logo} alt="Company Logo" className="h-10" />}
@@ -77,5 +77,4 @@ function ExperienceCard({ logo, role, duration, location, points }) {
     </div>
   );
 }
-
 export default WorkExperience;

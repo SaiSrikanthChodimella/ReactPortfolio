@@ -3,19 +3,19 @@ import UnderGoing from "../assets/Under_Construction.png";
 
 function Projects() {
   return (
-    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg text-white transform transition-transform hover:scale-102 hover:shadow-2xl">
+    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg text-white transform transition-transform hover:scale-102 hover:shadow-2xl bento-box">
       <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
 
       {/* Dashboard Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Project Monster Builder */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105">
+        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 bento-box">
           <img
             src={Monsters}
             alt="Project Monster Builder"
-            className="w-full h-48 object-cover"
+            className="w-full h-48 object-cover bento-box"
           />
-          <div className="p-6">
+          <div className="p-6 bento-box">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
               Project Monster Builder
             </h3>
@@ -56,7 +56,7 @@ function Projects() {
                 href="https://dev.azure.com/srikanthchodimella/MonsterBuilder"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors bento-box"
               >
                 Project Repo Link
               </a>
@@ -64,7 +64,7 @@ function Projects() {
                 href="https://monsterbuildermanager.azurewebsites.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition-colors bento-box"
               >
                 Monster Builder Page
               </a>
@@ -73,13 +73,13 @@ function Projects() {
         </div>
 
         {/* New Project Coming Soon */}
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105">
+        <div className="bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 bento-box">
           <img
             src={UnderGoing}
             alt="Under Construction"
-            className="w-full h-48 object-cover"
+            className="w-full h-48 object-cover bento-box"
           />
-          <div className="p-6">
+          <div className="p-6 bento-box">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
               New Project Coming Soon
             </h3>
