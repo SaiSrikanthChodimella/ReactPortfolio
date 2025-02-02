@@ -65,8 +65,10 @@ const Navbar = () => {
                 key={idx}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 ${
-                    isActive ? "font-semibold bg-blue-50 text-blue-600" : ""
+                  `px-4 py-2 rounded-lg transition duration-300 ${
+                    isActive
+                      ? "bg-sky-900 text-white font-semibold"
+                      : "hover:bg-sky-900 hover:text-white text-black"
                   }`
                 }
               >

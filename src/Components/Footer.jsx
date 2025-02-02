@@ -14,9 +14,12 @@ function Footer() {
             About This Page
           </h5>
           <p className="text-lg text-gray-400">
-            Welcome to my portfolio! Built with{" "}
-            <strong className="text-blue-400">.NET 9, Tailwind, ReactJS</strong>
-            , this site highlights my projects, skills, and expertise. Feel free
+            Welcome to my portfolio! <br />
+            Built with{" "}
+            <strong className="text-blue-400">
+              .NET 9, Tailwind, and React.js
+            </strong>
+            , this site showcases my projects, skills, and expertise. Feel free
             to connect with me for any inquiries.
           </p>
         </div>
@@ -113,9 +116,9 @@ function Footer() {
                 saisrikanthchodimella@gmail.com
               </a>
             </p>
-            <p className="text-sm text-gray-400 mt-2">
+            <cite className="text-sm text-gray-400 mt-2">
               Looking forward to your feedback. Have a great day!
-            </p>
+            </cite>
           </div>
         </div>
       </div>
