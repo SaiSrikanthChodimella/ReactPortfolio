@@ -6,13 +6,34 @@ export default function AboutMe() {
     <div className="bg-sky-800 p-6 md:p-8 rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-        {/* Left Section: Centered Profile Image */}
-        <div className="w-full md:w-1/3 flex justify-center">
-          <img
-            src={myImage}
-            alt="Sai Srikanth Chodimella"
-            className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2 bento-box"
-          />
+        {/* Left Section: Centered Profile Image and Quote */}
+        <div className="w-full md:w-1/3 flex flex-col gap-6">
+          {/* Profile Image */}
+          <div className="flex justify-center">
+            <img
+              src={myImage}
+              alt="Sai Srikanth Chodimella"
+              className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl md:col-span-2 bento-box"
+            />
+          </div>
+
+          {/* New Bento Box: Professional Quote */}
+          <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-2xl bento-box">
+            <blockquote className="text-gray-200 italic text-center">
+              "I believe in keeping things <strong>neat</strong>,
+              <strong> clean</strong>, and <strong>straightforward</strong> — it
+              makes things less complicated and more enjoyable."
+            </blockquote>
+
+            <div className="bg-white p-4 rounded-lg shadow-md mt-4 transition-transform hover:scale-105 hover:shadow-2xl bento-box">
+              <blockquote className="text-lg italic text-center">
+                "Simplicity is the key to brilliance."
+              </blockquote>
+              <cite className="block text-sm text-gray-700 text-center mt-2">
+                — Bruce Lee
+              </cite>
+            </div>
+          </div>
         </div>
 
         {/* Right Section: Expanded Bento Box Layout */}
