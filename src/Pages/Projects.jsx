@@ -1,6 +1,7 @@
 import Monsters from "../assets/Project.png";
 import UnderGoing from "../assets/Under_Construction.png";
 import Resume from "../assets/Resume.png";
+import Programming from "../assets/Programming.png";
 
 const projectData = [
   {
@@ -48,6 +49,29 @@ const projectData = [
       {
         text: "Live Page",
         href: "https://saisrikanthchodimella.azurewebsites.net/",
+        color: "green",
+      },
+    ],
+  },
+  {
+    img: Programming,
+    title: "C# .NET Notes",
+    description: "A C# .NET Handbook",
+    details: [
+      "Built using React Java Script",
+      "Utilized Taiwlind CSS 4.0.3 ",
+      "in Beta Phase",
+      "Hosted on GitHub Pages",
+    ],
+    links: [
+      {
+        text: "C# .NET Site Repo",
+        href: "https://github.com/SaiSrikanthChodimella/LearnCSharp",
+        color: "blue",
+      },
+      {
+        text: "Live Page",
+        href: "https://saisrikanthchodimella.github.io/LearnCSharp/",
         color: "green",
       },
     ],
