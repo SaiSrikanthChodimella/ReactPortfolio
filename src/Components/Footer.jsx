@@ -5,18 +5,10 @@ import Gmail from "../assets/Icons/Gmail.png";
 import Linkedin from "../assets/Icons/Linkedin.png";
 
 const FooterSection = ({ title, children }) => (
-  <div>
-    <h5 className="text-2xl font-semibold text-gray-300">{title}</h5>
+  <div className="space-y-3">
+    <h5 className="text-lg font-semibold text-gray-300">{title}</h5>
     {children}
   </div>
-);
-
-const FooterLink = ({ href, label }) => (
-  <li>
-    <a href={href} className="hover:text-blue-400 transition">
-      {label}
-    </a>
-  </li>
 );
 
 const FooterIconLink = ({ href, src, alt, ariaLabel }) => (
@@ -24,101 +16,81 @@ const FooterIconLink = ({ href, src, alt, ariaLabel }) => (
     href={href}
     target="_blank"
     aria-label={ariaLabel}
-    className="transition-transform transform hover:scale-110"
+    className="hover:scale-110 transition-transform"
   >
-    <img src={src} alt={alt} className="w-10 h-10" />
+    <img src={src} alt={alt} className="w-8 h-8" />
   </a>
 );
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-8 rounded-xl shadow-lg">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-sm shadow-md text-gray-200">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
         <FooterSection title="About This Page">
-          <p className="text-lg text-gray-400">
-            Welcome to my portfolio! <br />
-            Built with{" "}
-            <strong className="text-blue-400">
-              .NET 9, Tailwind, and React.js
-            </strong>
-            , this site showcases my projects, skills, and expertise. Feel free
-            to connect with me for any inquiries.
+          <p>
+            Welcome to my portfolio! Built with{" "}
+            <strong className="text-yellow-400">React.js Tailwind</strong>, this
+            site showcases my projects and skills. Let's connect!
           </p>
         </FooterSection>
 
-        <FooterSection title="Quick Links">
-          <ul className="space-y-2 text-lg text-gray-400">
-            <FooterLink href="#AboutMe" label="About Me" />
-            <FooterLink href="#Skills" label="Skills" />
-            <FooterLink href="#Projects" label="Projects" />
-            <FooterLink href="#Certifications" label="Certifications" />
-          </ul>
-        </FooterSection>
-
-        <FooterSection title="Resource Links">
-          <div className="flex space-x-6">
+        <FooterSection title="Resources">
+          <div className="flex space-x-4">
             <FooterIconLink
               href="https://dev.azure.com/srikanthchodimella/MonsterBuilder"
               src={Git}
-              alt="Git Icon"
+              alt="Git"
               ariaLabel="Git"
             />
             <FooterIconLink
               href="https://tailwindui.com/"
               src={TailWind}
-              alt="Tailwind Icon"
+              alt="Tailwind"
               ariaLabel="Tailwind"
             />
             <FooterIconLink
               href="https://react.dev/"
               src={ReactJS}
-              alt="ReactJS Icon"
+              alt="ReactJS"
               ariaLabel="ReactJS"
             />
           </div>
         </FooterSection>
 
-        <FooterSection title="Contact Me">
-          <div className="flex space-x-6">
+        <FooterSection title="Contact">
+          <div className="flex space-x-4">
             <FooterIconLink
               href="mailto:saisrikanthchodimella@gmail.com"
               src={Gmail}
-              alt="Gmail Icon"
+              alt="Gmail"
               ariaLabel="Gmail"
             />
             <FooterIconLink
               href="https://www.linkedin.com/in/sai-srikanth-chodimella/"
               src={Linkedin}
-              alt="LinkedIn Icon"
+              alt="LinkedIn"
               ariaLabel="LinkedIn"
             />
           </div>
-          <div className="mt-4">
-            <p className="text-gray-400">
-              <strong>Email:</strong>{" "}
-              <a
-                href="mailto:saisrikanthchodimella@gmail.com"
-                className="text-blue-400 hover:underline"
-              >
-                saisrikanthchodimella@gmail.com
-              </a>
-            </p>
-            <cite className="text-sm text-gray-400 mt-2">
-              Looking forward to your feedback. Have a great day!
-            </cite>
-          </div>
+          <p className="mt-2">
+            <strong>Email:</strong>{" "}
+            <a
+              href="mailto:saisrikanthchodimella@gmail.com"
+              className="text-blue-400 hover:underline"
+            >
+              saisrikanthchodimella@gmail.com
+            </a>
+          </p>
         </FooterSection>
       </div>
 
-      <hr className="border-gray-700 my-8" />
+      <hr className="border-gray-700 my-4" />
 
-      <div className="text-center text-gray-400">
-        <p>
-          &copy; {new Date().getFullYear()} Sai Srikanth Chodimella. All Rights
-          Reserved.
-        </p>
-      </div>
-    </div>
+      <p className="text-center text-xs">
+        &copy; {new Date().getFullYear()} Sai Srikanth Chodimella. All Rights
+        Reserved.
+      </p>
+    </footer>
   );
 }
 
