@@ -35,7 +35,7 @@ const experiences = [
 
 function WorkExperience() {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
+    <section className="bg-gradient-to-r from-cyan-900 to-amber-600 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="max-w-5xl mx-auto bento-box">
         <Header />
         <div className="space-y-8 bento-box">
@@ -51,10 +51,10 @@ function WorkExperience() {
 function Header() {
   return (
     <header className="text-center mb-12">
-      <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400">
+      <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-cyan-300">
         Professional Experience
       </h1>
-      <p className="text-lg md:text-xl text-gray-400 mt-4">
+      <p className="text-lg md:text-xl text-white  mt-4">
         Showcasing my journey through innovation and performance optimization
       </p>
     </header>
@@ -83,7 +83,7 @@ function CardHeader({ logo, role, duration, location }) {
       )}
       <div className="text-white">
         <p className="text-xl md:text-2xl font-semibold">{role}</p>
-        <p className="text-sm md:text-base text-gray-300">
+        <p className="text-sm md:text-base text-white">
           {duration} | {location}
         </p>
       </div>
@@ -93,7 +93,7 @@ function CardHeader({ logo, role, duration, location }) {
 
 function CardContent({ points }) {
   return (
-    <ul className="list-disc pl-6 space-y-3 text-gray-200">
+    <ul className="list-disc pl-6 space-y-3 text-white">
       {points.map((point, index) => (
         <li key={index} className="text-sm md:text-base">
           {point}

@@ -2,7 +2,7 @@ import Certificate from "../assets/Certification.png";
 
 function Certifications() {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
+    <section className="bg-gradient-to-r from-sky-900 to-indigo-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center bento-box">
         {/* Certificate Image */}
         <div className="flex justify-center bento-box">
@@ -15,23 +15,23 @@ function Certifications() {
 
         {/* Certification Details */}
         <div className="space-y-6 text-white bento-box">
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400">
+          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-indigo-300">
             Foundational C# with Microsoft
           </h2>
 
-          <p className="text-base md:text-lg text-gray-300 bento-box">
+          <p className="text-base md:text-lg text-white bento-box">
             This certification validates my proficiency in{" "}
-            <strong className="text-sky-400">C#</strong> and the{" "}
-            <strong className="text-sky-400">.NET</strong> ecosystem,
+            <strong className="text-sky-300">C#</strong> and the{" "}
+            <strong className="text-sky-300">.NET</strong> ecosystem,
             demonstrating my ability to develop robust and scalable
             applications.
           </p>
 
           <div className="space-y-4 bento-box">
-            <h3 className="text-2xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400">
+            <h3 className="text-2xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300">
               Key Features:
             </h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <ul className="list-disc list-inside text-white space-y-2">
               <li>
                 Validates foundational knowledge of{" "}
                 <strong className="text-sky-400">C#</strong> programming.

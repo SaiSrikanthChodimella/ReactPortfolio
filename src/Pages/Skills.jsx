@@ -47,7 +47,7 @@ function SkillItem({ skill, isOpen, onClick }) {
         onClick={onClick}
         className="w-full text-left p-6 md:p-8 flex justify-between items-center focus:outline-none"
       >
-        <h3 className="text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
+        <h3 className="text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-gray-200">
           {skill.title}
         </h3>
         <span className="text-2xl md:text-3xl text-gray-300">
@@ -76,9 +76,9 @@ function SkillsSection() {
     setOpenSkill(openSkill === index ? null : index);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
+    <div className="bg-gradient-to-r from-zinc-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="max-w-7xl mx-auto px-4 md:px-6 bento-box">
-        <h2 className="text-4xl md:text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-8 bento-box">
+        <h2 className="text-4xl md:text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-gray-200 mb-8 bento-box">
           Skills & Expertise
         </h2>
         <div className="space-y-6 bento-box">
