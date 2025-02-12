@@ -34,34 +34,37 @@ function UniversityCard({
   link,
 }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform hover:scale-105 mb-8 bento-box">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bento-box">
-        <div className="flex flex-col lg:flex-row items-center gap-8 bento-box">
-          <div className="w-full lg:w-1/2 bento-box">
+    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-3xl mb-8">
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* University Image */}
+          <div className="w-full lg:w-1/2 flex justify-center">
             <img
               src={image}
               alt={name}
-              className="w-full max-w-md rounded-lg"
+              className="bg-white w-full max-w-md rounded-2xl shadow-lg border-4 border-opacity-25 border-white"
             />
           </div>
+
+          {/* University Details */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-4">
               {name}
             </h2>
-            <p className="text-gray-600 mb-4">
-              <strong>{duration}</strong>
+            <p className="text-gray-300 mb-4">
+              <strong className="text-sky-400">{duration}</strong>
               <br />
               {location}
               <br />
-              <strong>{degree}</strong>
+              <strong className="text-sky-400">{degree}</strong>
             </p>
-            <p className="text-gray-600 mb-4">{description}</p>
+            <p className="text-gray-300 mb-4">{description}</p>
             <div className="mt-6">
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-sky-900 text-white px-6 py-2 rounded-md shadow-md hover:scale-105 transition-transform"
+                className="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-3 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl"
               >
                 Visit {name}
               </a>
@@ -75,12 +78,14 @@ function UniversityCard({
 
 function Education() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg transition-transform hover:scale-102 hover:shadow-2xl bento-box">
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-8">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+      <h2 className="text-4xl md:text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-8 bento-box">
         Education
       </h2>
       {universities.map((uni, index) => (
-        <UniversityCard key={index} {...uni} />
+        <div className="bento-box">
+          <UniversityCard key={index} {...uni} />
+        </div>
       ))}
     </div>
   );

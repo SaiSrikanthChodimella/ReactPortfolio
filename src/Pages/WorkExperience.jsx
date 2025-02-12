@@ -35,10 +35,10 @@ const experiences = [
 
 function WorkExperience() {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-8 text-white rounded-xl shadow-lg hover:scale-102 hover:shadow-2xl bento-box">
-      <div className="max-w-5xl mx-auto">
+    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+      <div className="max-w-5xl mx-auto bento-box">
         <Header />
-        <div className="space-y-6">
+        <div className="space-y-8 bento-box">
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} {...exp} />
           ))}
@@ -50,11 +50,11 @@ function WorkExperience() {
 
 function Header() {
   return (
-    <header className="text-center mb-8 md:mb-12 bento-box">
-      <h1 className="text-3xl md:text-4xl font-bold mb-2">
+    <header className="text-center mb-12">
+      <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400">
         Professional Experience
       </h1>
-      <p className="text-lg md:text-xl text-gray-400">
+      <p className="text-lg md:text-xl text-gray-400 mt-4">
         Showcasing my journey through innovation and performance optimization
       </p>
     </header>
@@ -63,7 +63,7 @@ function Header() {
 
 function ExperienceCard({ logo, role, duration, location, points }) {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 hover:scale-105 hover:shadow-lg bento-box">
+    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-3xl">
       <CardHeader
         logo={logo}
         role={role}
@@ -78,10 +78,12 @@ function ExperienceCard({ logo, role, duration, location, points }) {
 function CardHeader({ logo, role, duration, location }) {
   return (
     <div className="flex items-center gap-4 mb-4">
-      {logo && <img src={logo} alt="Company Logo" className="h-10" />}
-      <div className="text-slate-900">
-        <p className="text-base md:text-lg font-semibold">{role}</p>
-        <p className="text-xs md:text-sm text-gray-600">
+      {logo && (
+        <img src={logo} alt="Company Logo" className="h-12 rounded-lg" />
+      )}
+      <div className="text-white">
+        <p className="text-xl md:text-2xl font-semibold">{role}</p>
+        <p className="text-sm md:text-base text-gray-300">
           {duration} | {location}
         </p>
       </div>
@@ -91,9 +93,11 @@ function CardHeader({ logo, role, duration, location }) {
 
 function CardContent({ points }) {
   return (
-    <ul className="list-disc pl-5 space-y-2 text-gray-700">
+    <ul className="list-disc pl-6 space-y-3 text-gray-200">
       {points.map((point, index) => (
-        <li key={index}>{point}</li>
+        <li key={index} className="text-sm md:text-base">
+          {point}
+        </li>
       ))}
     </ul>
   );

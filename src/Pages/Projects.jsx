@@ -65,7 +65,7 @@ const projectData = [
     ],
     links: [
       {
-        text: "C# .NET Site Repo",
+        text: "Site Repo",
         href: "https://github.com/SaiSrikanthChodimella/LearnCSharp",
         color: "blue",
       },
@@ -91,21 +91,21 @@ const projectData = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="flex-shrink-0 w-full sm:w-80 md:w-96 bg-white rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 flex flex-col">
+    <div className="flex-shrink-0 w-full sm:w-80 md:w-96 bg-gradient-to-r from-slate-800 to-gray-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 flex flex-col">
       <img
         src={project.img}
         alt={project.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover bento-box"
       />
       <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-2xl font-bold text-gray-800 mb-2">
+        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-2">
           {project.title}
         </h3>
-        <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-        <ul className="space-y-2 text-gray-700 flex-grow">
+        <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+        <ul className="space-y-2 text-gray-300 flex-grow">
           {project.details.map((detail, index) => (
             <li key={index}>
-              <span className="text-indigo-600">•</span> {detail}
+              <span className="text-sky-400">•</span> {detail}
             </li>
           ))}
         </ul>
@@ -117,7 +117,7 @@ function ProjectCard({ project }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-${link.color}-600 rounded-md hover:bg-${link.color}-700 transition-colors`}
+                className={`inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl`}
               >
                 {link.text}
               </a>
@@ -131,9 +131,11 @@ function ProjectCard({ project }) {
 
 function Projects() {
   return (
-    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-xl shadow-lg text-white transform transition-transform hover:scale-102 hover:shadow-2xl">
-      <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
-      <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-800">
+    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+      <h2 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-8 bento-box">
+        Projects
+      </h2>
+      <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-thin scrollbar-thumb-sky-600 scrollbar-track-gray-800 bento-box">
         {projectData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

@@ -18,8 +18,10 @@ const Navbar = () => {
       key={idx}
       to={item.path}
       className={({ isActive }) =>
-        `block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-300 rounded-lg ${
-          isActive ? "font-semibold bg-blue-50 text-blue-600" : ""
+        `block px-4 py-3 text-gray-200 hover:bg-sky-700 hover:text-white transition duration-300 rounded-lg ${
+          isActive
+            ? "font-semibold bg-gradient-to-r from-sky-600 to-indigo-600 text-white"
+            : ""
         } ${isMobile ? "block" : "inline-block"}`
       }
       onClick={() => isMobile && setIsOpen(false)}
@@ -29,20 +31,22 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-white w-full shadow-lg rounded-xl">
+    <nav className="bg-gradient-to-r from-slate-900 to-gray-900 w-full shadow-2xl">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+          {/* Logo */}
           <NavLink
             to="/"
-            className="text-2xl font-bold text-slate-600 hover:text-blue-700 transition duration-300"
+            className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 hover:from-sky-500 hover:to-indigo-500 transition duration-300"
           >
             My Portfolio
           </NavLink>
 
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="text-gray-200 hover:text-sky-400 focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
@@ -70,17 +74,19 @@ const Navbar = () => {
             </button>
           </div>
 
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-4">
             {navigationLinks.map((item, idx) => renderNavLink(item, idx))}
           </div>
         </div>
 
+        {/* Mobile Navigation Links */}
         <div
           className={`md:hidden ${
             isOpen ? "block" : "hidden"
           } transition-all duration-300`}
         >
-          <ul className="bg-white border-t border-gray-200 rounded-lg shadow-md py-2">
+          <ul className="bg-gradient-to-r from-slate-800 to-gray-800 border-t border-gray-700 rounded-lg shadow-lg py-2">
             {navigationLinks.map((item, idx) => (
               <li key={idx}>{renderNavLink(item, idx, true)}</li>
             ))}

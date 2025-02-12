@@ -37,7 +37,7 @@ const techStack = [
 const duplicatedTechStack = [...techStack, ...techStack];
 
 const TechStack = () => (
-  <div className="py-12 text-white">
+  <div className="py-2 text-white">
     <SectionTitle title="Tech Stack" />
     <InfiniteScrollContainer>
       {duplicatedTechStack.map((tech, index) => (
@@ -58,7 +58,7 @@ const InfiniteScrollContainer = ({ children }) => (
 );
 
 const TechCard = ({ icon, name }) => (
-  <div className="bg-sky-900 w-32 h-32 rounded-lg shadow-lg flex flex-col items-center justify-center p-6 transform transition-transform hover:scale-105">
+  <div className="w-28 h-28 rounded-lg shadow-lg flex flex-col items-center justify-center p-6 transform transition-transform hover:scale-105">
     <img src={icon} alt={name} className="w-16 h-16 object-contain" />
     <p className="text-lg font-semibold mt-2">{name}</p>
   </div>
