@@ -2,14 +2,14 @@ import Certificate from "../assets/Certification.png";
 
 function Certifications() {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center bento-box">
         {/* Certificate Image */}
         <div className="flex justify-center bento-box">
           <img
             src={Certificate}
             alt="Certification"
-            className="w-full max-w-md rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-3xl border-4 border-opacity-25 border-white"
+            className="w-full max-w-md rounded-2xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl border-4 border-opacity-25 border-white"
           />
         </div>
 
@@ -47,7 +47,7 @@ function Certifications() {
               href="https://www.freecodecamp.org/certification/Sai_Srikanth_Chodimella/foundational-c-sharp-with-microsoft"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-3 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl"
+              className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-3 rounded-2xl shadow-lg transform transition-all duration-100 hover:scale-110 hover:shadow-2xl"
             >
               View Certificate
             </a>

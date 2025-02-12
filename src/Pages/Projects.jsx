@@ -91,7 +91,7 @@ const projectData = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="flex-shrink-0 w-full sm:w-80 md:w-96 bg-gradient-to-r from-slate-800 to-gray-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 flex flex-col">
+    <div className="flex-shrink-0 w-full sm:w-80 md:w-96 bg-gradient-to-r from-slate-800 to-gray-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-100 hover:scale-105 flex flex-col">
       <img
         src={project.img}
         alt={project.title}
@@ -117,7 +117,7 @@ function ProjectCard({ project }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl`}
+                className={`inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl shadow-lg transform transition-all duration-100 hover:scale-110 hover:shadow-2xl`}
               >
                 {link.text}
               </a>
@@ -131,7 +131,7 @@ function ProjectCard({ project }) {
 
 function Projects() {
   return (
-    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+    <div className="p-8 bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl shadow-2xl bento-box">
       <h2 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-8 bento-box">
         Projects
       </h2>

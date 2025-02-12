@@ -35,7 +35,7 @@ const experiences = [
 
 function WorkExperience() {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+    <section className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="max-w-5xl mx-auto bento-box">
         <Header />
         <div className="space-y-8 bento-box">
@@ -63,7 +63,7 @@ function Header() {
 
 function ExperienceCard({ logo, role, duration, location, points }) {
   return (
-    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-3xl">
+    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 transform transition-all duration-100 hover:scale-105 hover:shadow-3xl">
       <CardHeader
         logo={logo}
         role={role}

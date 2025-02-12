@@ -42,7 +42,7 @@ const skillsData = [
 
 function SkillItem({ skill, isOpen, onClick }) {
   return (
-    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+    <div className="bg-gradient-to-r from-slate-800 to-gray-800 rounded-2xl shadow-lg transform transition-all duration-100 hover:scale-105 hover:shadow-2xl">
       <button
         onClick={onClick}
         className="w-full text-left p-6 md:p-8 flex justify-between items-center focus:outline-none"
@@ -76,7 +76,7 @@ function SkillsSection() {
     setOpenSkill(openSkill === index ? null : index);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-102 hover:shadow-3xl bento-box">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
       <div className="max-w-7xl mx-auto px-4 md:px-6 bento-box">
         <h2 className="text-4xl md:text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400 mb-8 bento-box">
           Skills & Expertise
