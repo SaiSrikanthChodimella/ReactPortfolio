@@ -3,26 +3,44 @@ import TechStack from "../Components/TechStack";
 
 export default function AboutMe() {
   return (
-    <div className="bg-gradient-to-r from-sky-900 to-indigo-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center bento-box">
-        {/* Left Section: Profile Image and Quote */}
-        <div className="w-full md:w-1/3 flex flex-col gap-6 bento-box">
-          <ProfileImage />
-          <ProfessionalQuote />
+    <div className="bg-gray-50/90 backdrop-blur-lg min-h-screen p-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl transform rotate-2 group-hover:rotate-1 transition-all duration-300" />
+            <div className="relative z-10 bg-white rounded-2xl shadow-lg p-6 border border-gray-100/50">
+              <ProfileImage />
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <NameTitle />
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+              <AboutDescription />
+            </div>
+          </div>
         </div>
 
-        {/* Right Section: Information and Skills */}
-        <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 bento-box">
-          <NameTitle />
-          <AboutDescription />
-          <KeySkills />
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+            <ProfessionalQuote />
+          </div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+            <KeySkills />
+          </div>
+        </div>
+
+        {/* Action Section */}
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
           <CallToAction />
         </div>
-      </div>
 
-      {/* Tech Stack Component */}
-      <div className="mt-12 bg-gradient-to-r from-slate-900 to-gray-900 rounded-3xl shadow-2xl bento-box">
-        <TechStack />
+        {/* Tech Stack */}
+        <div className="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+          <TechStack />
+        </div>
       </div>
     </div>
   );
@@ -30,29 +48,34 @@ export default function AboutMe() {
 
 function ProfileImage() {
   return (
-    <div className="flex justify-center">
-      <img
-        src={myImage}
-        alt="Sai Srikanth Chodimella"
-        className="w-64 h-64 object-cover rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl border-4 border-opacity-25"
-      />
-    </div>
+    <img
+      src={myImage}
+      alt="Sai Srikanth Chodimella"
+      className="w-full h-auto object-cover rounded-xl border-4 border-gray-100 hover:border-blue-600 transition-all duration-300"
+    />
   );
 }
 
 function ProfessionalQuote() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl">
-      <blockquote className="text-gray-200 italic text-center text-lg">
-        "I believe in keeping things <strong>neat</strong>,{" "}
-        <strong>clean</strong>, and <strong>straightforward</strong> — it makes
-        things less complicated and more enjoyable."
-      </blockquote>
-      <div className="bg-white bg-opacity-10 p-6 rounded-2xl shadow-md mt-4 transform transition-all duration-100 hover:scale-105 hover:shadow-2xl">
-        <blockquote className="text-lg italic text-center">
-          "Simplicity is the key to brilliance."
+    <div className="space-y-6">
+      <h2 className="text-2xl font-semibold text-gray-900 tracking-tight">
+        Development Philosophy
+      </h2>
+      <div className="space-y-6">
+        <blockquote className="text-gray-600 text-lg leading-relaxed border-l-4 border-blue-600 pl-6">
+          "I architect solutions that combine technical excellence with
+          practical value, creating digital experiences that are both powerful
+          and intuitive."
         </blockquote>
-        <cite className="block text-sm text-center mt-2">— Bruce Lee</cite>
+        <div className="bg-blue-50/50 p-6 rounded-xl border border-blue-100/50">
+          <p className="text-gray-600 italic">
+            "Simplicity is the ultimate sophistication."
+            <span className="block text-sm text-gray-500 mt-2">
+              — Leonardo da Vinci
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -60,51 +83,92 @@ function ProfessionalQuote() {
 
 function NameTitle() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl md:col-span-2">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
+    <div className="space-y-6">
+      <h1 className="text-5xl font-bold text-gray-900 tracking-tight">
         Sai Srikanth Chodimella
       </h1>
+      <div className="flex flex-wrap gap-3">
+        <span className="px-4 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-full">
+          .NET Developer
+        </span>
+        <span className="px-4 py-1.5 bg-gray-100/50 text-gray-600 text-sm font-medium rounded-full border border-gray-200/50">
+          Full Stack Developer
+        </span>
+      </div>
     </div>
   );
 }
 
 function AboutDescription() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl">
-      <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mb-4">
-        About Me
+    <div className="space-y-6">
+      <h2 className="text-2xl font-semibold text-gray-900 tracking-tight">
+        Technical Profile
       </h2>
-      <p className="text-sm md:text-base text-gray-200">
-        Experienced <strong>.NET Developer</strong> with close to{" "}
-        <strong>5 years</strong> of expertise in designing and developing
-        scalable, high-quality solutions across{" "}
-        <strong>Web, Microservices, Mobile, and Desktop applications</strong>.
-        Skilled in delivering innovative projects following industry-standard
-        guidelines and best practices.
+      <p className="text-gray-900 text-lg leading-relaxed">
+        Full-stack developer with 5+ years experience delivering enterprise
+        solutions across Microsoft technologies. Specialized in:
       </p>
+      <ul className="space-y-6">
+        {[
+          ".NET Software Development & Architecture – Expertise in designing and building scalable, high-performance applications",
+          "Legacy System Modernization – Transforming outdated systems into modern, maintainable solutions",
+          "Performance Optimization & Testing – Enhancing application efficiency and reliability through rigorous testing and tuning",
+          "Enterprise Solutions Development – Delivering robust, industry-compliant applications using Microsoft technologies",
+        ].map((item, index) => {
+          const [highlight, description] = item.split(" – ");
+
+          return (
+            <li key={index} className="flex items-start space-x-4">
+              <div className="flex-shrink-0 mt-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-900 tracking-tight">
+                  {highlight}
+                </h3>
+                <p className="text-gray-600 mt-1 leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
 
 function KeySkills() {
   const skills = [
-    "Proficient in C#, .NET, and ASP.NET Core.",
-    "Good with Full Stack and Backend Development.",
-    "Experience with Azure Cloud Services and DevOps.",
-    "Skilled in building RESTful APIs and Microservices.",
-    "Strong knowledge of Entity Framework Core and SQL.",
+    { name: "C# & .NET", level: "Expert" },
+    { name: "Frontend Development", level: "Advanced" },
+    { name: "Backend Development", level: "Expert" },
+    { name: "Testing", level: "Advanced" },
+    { name: "Database Design", level: "Advanced" },
   ];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl">
-      <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mb-4">
-        Key Skills:
-      </h3>
-      <ul className="list-disc list-inside text-gray-200 space-y-2">
+    <div className="space-y-6">
+      <h2 className="text-2xl font-semibold text-gray-900 tracking-tight">
+        Core Competencies
+      </h2>
+      <div className="space-y-6">
         {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
+          <div key={index} className="space-y-2">
+            <div className="flex justify-between text-base">
+              <span className="text-gray-600">{skill.name}</span>
+              <span className="text-blue-600 font-medium">{skill.level}</span>
+            </div>
+            <div className="h-2 bg-gray-100/50 rounded-full">
+              <div
+                className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                style={{ width: `${skill.level === "Expert" ? "90%" : "75%"}` }}
+              />
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
@@ -113,33 +177,35 @@ function CallToAction() {
   const links = [
     {
       href: "https://www.linkedin.com/in/sai-srikanth-chodimella/",
-      text: "LinkedIn",
+      text: "Connect on LinkedIn",
+    },
+    {
+      href: "https://github.com/SaiSrikanthChodimella",
+      text: "Explore GitHub Repos",
     },
     {
       href: "https://dev.azure.com/srikanthchodimella/MonsterBuilder",
-      text: "Azure Repo",
+      text: "Explore Azure Repos",
     },
     {
       href: "https://roadmap.sh/r/my-roadmap-as-net-developer",
-      text: "My Road Map",
+      text: "View Development Roadmap",
     },
   ];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 p-6 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl md:col-span-2">
-      <div className="flex flex-wrap gap-4 justify-center">
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-3 rounded-2xl shadow-lg transform transition-all duration-100 hover:scale-110 hover:shadow-2xl"
-          >
-            {link.text}
-          </a>
-        ))}
-      </div>
+    <div className="grid md:grid-cols-4 gap-6">
+      {links.map((link, index) => (
+        <a
+          key={index}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-6 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-300 text-center"
+        >
+          {link.text}
+        </a>
+      ))}
     </div>
   );
 }

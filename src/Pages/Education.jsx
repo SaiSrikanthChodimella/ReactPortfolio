@@ -24,6 +24,31 @@ const universities = [
   },
 ];
 
+export default function Education() {
+  return (
+    <section className="bg-gray-50/50 py-24 px-6 backdrop-blur-lg">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-semibold text-gray-900 mb-4">
+            Academic Journey
+            <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            A strong educational foundation fueling innovation and technical
+            excellence
+          </p>
+        </div>
+
+        <div className="grid gap-12">
+          {universities.map((uni, index) => (
+            <UniversityCard key={index} {...uni} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function UniversityCard({
   name,
   duration,
@@ -34,61 +59,61 @@ function UniversityCard({
   link,
 }) {
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-cyan-800 rounded-3xl shadow-2xl transform transition-all duration-100 hover:scale-105 hover:shadow-3xl mb-8">
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          {/* University Image */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+    <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200/80 overflow-hidden">
+      <div className="flex flex-col lg:flex-row gap-10 p-10">
+        {/* University Image */}
+        <div className="lg:w-1/3 flex flex-col items-center">
+          <div className="relative w-64 h-64 rounded-xl bg-gray-50 p-6 shadow-inner border border-gray-100/50">
             <img
               src={image}
               alt={name}
-              className="bg-white w-full max-w-md rounded-2xl shadow-lg border-4 border-opacity-25 border-white"
+              className="w-full h-full object-contain transform transition-transform duration-300 hover:scale-105"
             />
           </div>
+          <div className="mt-6 flex gap-3">
+            <span className="px-4 py-1.5 bg-gray-100/50 text-gray-600 text-sm font-medium rounded-full border border-gray-200/50">
+              {duration}
+            </span>
+            <span className="px-4 py-1.5 bg-gray-100/50 text-gray-600 text-sm font-medium rounded-full border border-gray-200/50">
+              {location}
+            </span>
+          </div>
+        </div>
 
-          {/* University Details */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-teal-200 mb-4">
+        {/* University Details */}
+        <div className="lg:w-2/3 space-y-6">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-semibold text-gray-900 tracking-tight">
               {name}
             </h2>
-            <p className="text-white mb-4">
-              <strong className="text-teal-400">{duration}</strong>
-              <br />
-              {location}
-              <br />
-              <strong className="text-teal-400">{degree}</strong>
-            </p>
-            <p className="text-white mb-4">{description}</p>
-            <div className="mt-6">
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-3 rounded-2xl shadow-lg transform transition-all duration-100 hover:scale-110 hover:shadow-2xl"
-              >
-                Visit {name}
-              </a>
-            </div>
+            <h3 className="text-xl font-medium text-gray-600">{degree}</h3>
           </div>
+
+          <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
+
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-gray-900 hover:bg-gray-800 rounded-xl transition-colors duration-300"
+          >
+            Visit University
+            <svg
+              className="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   );
 }
-
-function Education() {
-  return (
-    <div className="bg-gradient-to-r from-cyan-900 to-gray-900 p-6 md:p-12 rounded-3xl shadow-2xl bento-box">
-      <h2 className="text-4xl md:text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-teal-200 mb-8 bento-box">
-        Education
-      </h2>
-      {universities.map((uni, index) => (
-        <div className="bento-box">
-          <UniversityCard key={index} {...uni} />
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default Education;

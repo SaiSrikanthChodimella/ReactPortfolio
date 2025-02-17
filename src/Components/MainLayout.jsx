@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainLayout = ({ children }) => {
-  return <div className="bg-gray-100 container mx-auto">{children}</div>;
+  return <div>{children}</div>;
 };
 
 export default MainLayout;
