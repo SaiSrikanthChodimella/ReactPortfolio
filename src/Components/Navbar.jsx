@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, refs }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationLinks = [
-    { title: "About", path: "/about" },
-    { title: "Experience", path: "/workexperience" },
-    { title: "Skills", path: "/skills" },
-    { title: "Projects", path: "/projects" },
-    { title: "Education", path: "/education" },
+    { title: "About", ref: refs.aboutRef },
+    { title: "Experience", ref: refs.experienceRef },
+    { title: "Skills", ref: refs.skillsRef },
+    { title: "Certifications", ref: refs.certificationsRef },
+    { title: "Projects", ref: refs.projectsRef },
+    { title: "Education", ref: refs.educationRef },
+    { title: "Contact", ref: refs.contactRef },
   ];
 
   return (
@@ -26,27 +27,26 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <NavLink
-              to="/"
+            <button
+              onClick={() => scrollToSection(refs.aboutRef)} // Scroll to top (About section)
               className="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors"
             >
               Sai Srikanth Chodimella
-            </NavLink>
+            </button>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8 items-center">
               {navigationLinks.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors ${
-                      isActive ? "border-b-2 border-gray-900" : ""
-                    }`
-                  }
+                <button
+                  key={item.title}
+                  onClick={() => {
+                    scrollToSection(item.ref);
+                    setIsOpen(false); // Close mobile menu after clicking
+                  }}
+                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   {item.title}
-                </NavLink>
+                </button>
               ))}
             </div>
 
@@ -89,20 +89,16 @@ const Navbar = () => {
           >
             <div className="px-4 pt-2 pb-4 space-y-2">
               {navigationLinks.map((item) => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-3 py-2 text-base font-medium rounded-lg transition-colors ${
-                      isActive
-                        ? "bg-gray-100 text-gray-900"
-                        : "text-gray-600 hover:bg-gray-100"
-                    }`
-                  }
+                <button
+                  key={item.title}
+                  onClick={() => {
+                    scrollToSection(item.ref);
+                    setIsOpen(false); // Close mobile menu after clicking
+                  }}
+                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-lg transition-colors w-full text-left"
                 >
                   {item.title}
-                </NavLink>
+                </button>
               ))}
             </div>
           </div>

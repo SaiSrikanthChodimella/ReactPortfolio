@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
 
-import MainLayout from "./Components/MainLayout.jsx";
 import Footer from "./Components/Footer.jsx";
 import Navbar from "./Components/Navbar.jsx";
 
@@ -10,27 +9,62 @@ import WorkExperience from "./Pages/WorkExperience.jsx";
 import Skills from "./Pages/Skills.jsx";
 import Certifications from "./Pages/Certifications.jsx";
 import Education from "./Pages/Education.jsx";
-import HomePage from "./Pages/HomePage.jsx"; // New HomePage component
 
 const App = () => {
+  // Create refs for each section
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const skillsRef = useRef(null);
+  const certificationsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const educationRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Function to scroll to a specific section
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <Router basename="/ReactPortfolio">
-      <MainLayout>
-        <Navbar />
-        <div className="flex-grow p-6 md:p-8 lg:p-12">
-          <Routes>
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/workexperience" element={<WorkExperience />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/certifications" element={<Certifications />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/" element={<HomePage />} />
-          </Routes>
+    <div className="flex flex-col min-h-screen">
+      <Navbar
+        scrollToSection={scrollToSection}
+        refs={{
+          aboutRef,
+          experienceRef,
+          skillsRef,
+          certificationsRef,
+          projectsRef,
+          educationRef,
+          contactRef,
+        }}
+      />
+      <div className="flex-grow p-6 md:p-8 lg:p-12">
+        <div ref={aboutRef}>
+          <AboutMe />
         </div>
-        <Footer />
-      </MainLayout>
-    </Router>
+        <div ref={experienceRef}>
+          <WorkExperience />
+        </div>
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
+        <div ref={certificationsRef}>
+          <Certifications />
+        </div>
+        <div ref={projectsRef}>
+          <Projects />
+        </div>
+        <div ref={educationRef}>
+          <Education />
+        </div>
+        <div ref={contactRef}>
+          <Footer />
+        </div>
+      </div>
+    </div>
   );
 };
 

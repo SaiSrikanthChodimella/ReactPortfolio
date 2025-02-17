@@ -35,7 +35,7 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <section className="bg-gray-50/90 py-24 px-6 backdrop-blur-lg">
+    <section className="bg-gray-50/90 py-20 px-6 backdrop-blur-lg">
       <div className="max-w-6xl mx-auto">
         <Header />
         <div className="mt-16 grid gap-12">

@@ -3,7 +3,7 @@ import TechStack from "../Components/TechStack";
 
 export default function AboutMe() {
   return (
-    <div className="bg-gray-50/90 backdrop-blur-lg min-h-screen p-8">
+    <div className="bg-gray-50/90 py-20 backdrop-blur-lg min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16">

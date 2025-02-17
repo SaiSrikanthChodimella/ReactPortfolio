@@ -26,7 +26,7 @@ const universities = [
 
 export default function Education() {
   return (
-    <section className="bg-gray-50/50 py-24 px-6 backdrop-blur-lg">
+    <section className="bg-gray-50/50 py-20 px-6 backdrop-blur-lg">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-semibold text-gray-900 mb-4">
