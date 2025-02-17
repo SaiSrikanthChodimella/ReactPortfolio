@@ -16,7 +16,7 @@ const Navbar = ({ scrollToSection, refs }) => {
   const handleScroll = (sectionRef) => {
     if (sectionRef?.current) {
       sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-      setTimeout(() => setIsOpen(false), 200); // Close menu after slight delay
+      setTimeout(() => setIsOpen(false), 200); // Close menu after delay
     }
   };
 
@@ -25,18 +25,18 @@ const Navbar = ({ scrollToSection, refs }) => {
       {/* Blur Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
           onClick={() => setIsOpen(false)}
         />
       )}
 
-      <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm fixed w-full z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="fixed w-full z-50 bg-black backdrop-blur-md border-b border-white/10 shadow-md">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <button
               onClick={() => handleScroll(refs.aboutRef)}
-              className="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors"
+              className="text-[18px] font-semibold tracking-wide text-white hover:text-gray-300 transition-all duration-300"
             >
               Sai Srikanth Chodimella
             </button>
@@ -47,7 +47,7 @@ const Navbar = ({ scrollToSection, refs }) => {
                 <button
                   key={item.title}
                   onClick={() => handleScroll(item.ref)}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-[14px] font-medium text-white hover:text-gray-300 transition-all duration-300"
                 >
                   {item.title}
                 </button>
@@ -57,7 +57,7 @@ const Navbar = ({ scrollToSection, refs }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 -mr-2 text-gray-600 hover:text-gray-900 focus:outline-none transition-colors"
+              className="md:hidden p-2 -mr-2 text-white hover:text-gray-300 transition-all duration-300"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               <svg
@@ -87,18 +87,18 @@ const Navbar = ({ scrollToSection, refs }) => {
 
           {/* Mobile Menu */}
           <div
-            className={`md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${
+            className={`md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all duration-300 ease-in-out ${
               isOpen
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-4 pointer-events-none"
-            } z-50`}
+            } z-50 rounded-b-xl`}
           >
-            <div className="px-4 pt-2 pb-4 space-y-2">
+            <div className="px-6 py-4 space-y-2">
               {navigationLinks.map((item) => (
                 <button
                   key={item.title}
                   onClick={() => handleScroll(item.ref)}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-lg transition-colors w-full text-left"
+                  className="block px-3 py-2 text-[15px] font-medium text-white hover:bg-white/10 rounded-lg transition-all duration-300 w-full text-left"
                 >
                   {item.title}
                 </button>
