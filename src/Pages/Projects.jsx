@@ -140,12 +140,14 @@ function ProjectCard({ project }) {
   return (
     <div className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200/80 h-full flex flex-col overflow-hidden">
       <div className="p-6 bg-gray-50 border-b border-gray-200/50 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        <img
-          src={project.img}
-          alt={project.title}
-          className="w-full h-48 object-contain mx-auto transform transition-transform duration-300 group-hover:scale-105"
-        />
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <img
+            src={project.img}
+            alt={project.title}
+            className="w-full h-48 object-contain mx-auto transform transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
       </div>
 
       <div className="p-6 flex flex-col flex-grow space-y-6">

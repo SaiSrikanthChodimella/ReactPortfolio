@@ -13,13 +13,20 @@ const Navbar = ({ scrollToSection, refs }) => {
     { title: "Contact", ref: refs.contactRef },
   ];
 
+  const handleScroll = (sectionRef) => {
+    if (sectionRef?.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => setIsOpen(false), 200); // Close menu after slight delay
+    }
+  };
+
   return (
     <>
       {/* Blur Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/10 backdrop-blur-sm z-40"
-          onClick={() => setIsOpen(false)} // Close menu when clicking outside
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+          onClick={() => setIsOpen(false)}
         />
       )}
 
@@ -28,7 +35,7 @@ const Navbar = ({ scrollToSection, refs }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <button
-              onClick={() => scrollToSection(refs.aboutRef)} // Scroll to top (About section)
+              onClick={() => handleScroll(refs.aboutRef)}
               className="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors"
             >
               Sai Srikanth Chodimella
@@ -39,10 +46,7 @@ const Navbar = ({ scrollToSection, refs }) => {
               {navigationLinks.map((item) => (
                 <button
                   key={item.title}
-                  onClick={() => {
-                    scrollToSection(item.ref);
-                    setIsOpen(false); // Close mobile menu after clicking
-                  }}
+                  onClick={() => handleScroll(item.ref)}
                   className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   {item.title}
@@ -83,18 +87,17 @@ const Navbar = ({ scrollToSection, refs }) => {
 
           {/* Mobile Menu */}
           <div
-            className={`md:hidden fixed inset-x-0 top-16 bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${
-              isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+            className={`md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${
+              isOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-4 pointer-events-none"
             } z-50`}
           >
             <div className="px-4 pt-2 pb-4 space-y-2">
               {navigationLinks.map((item) => (
                 <button
                   key={item.title}
-                  onClick={() => {
-                    scrollToSection(item.ref);
-                    setIsOpen(false); // Close mobile menu after clicking
-                  }}
+                  onClick={() => handleScroll(item.ref)}
                   className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-100 rounded-lg transition-colors w-full text-left"
                 >
                   {item.title}
