@@ -6,22 +6,24 @@ import Linkedin from "../assets/Icons/Linkedin.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <footer className="bg-black text-white py-16">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About Section */}
           <FooterSection title="About This Portfolio">
-            <p className="text-gray-400 leading-relaxed">
-              A modern showcase of technical expertise, built with{" "}
-              <span className="text-blue-400">React</span> and{" "}
-              <span className="text-blue-400">Tailwind CSS</span>. Designed to
-              demonstrate innovative solutions and professional capabilities.
+            <p className="text-lg font-light leading-relaxed text-gray-300">
+              This portfolio is a refined showcase of my technical journey,
+              built using the latest in web technologies like{" "}
+              <span className="font-semibold text-blue-400">React</span> and{" "}
+              <span className="font-semibold text-blue-400">Tailwind CSS</span>.
+              It reflects my passion for creating innovative solutions that push
+              the limits of modern development.
             </p>
           </FooterSection>
 
-          {/* Resources Section */}
+          {/* Development Tools Section */}
           <FooterSection title="Development Tools">
-            <div className="flex gap-3">
+            <div className="flex gap-6 items-center">
               <FooterIconLink
                 href="https://dev.azure.com/srikanthchodimella/MonsterBuilder"
                 src={Git}
@@ -45,7 +47,7 @@ export default function Footer() {
 
           {/* Contact Section */}
           <FooterSection title="Let's Connect">
-            <div className="flex gap-3">
+            <div className="flex gap-6 items-center">
               <FooterIconLink
                 href="mailto:saisrikanthchodimella@gmail.com"
                 src={Gmail}
@@ -59,7 +61,7 @@ export default function Footer() {
                 ariaLabel="LinkedIn Profile"
               />
             </div>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-6 text-gray-300">
               <a
                 href="mailto:saisrikanthchodimella@gmail.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -70,8 +72,9 @@ export default function Footer() {
           </FooterSection>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <p className="text-center text-gray-500 text-sm">
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} Sai Srikanth Chodimella. All
             rights reserved.
           </p>
@@ -82,8 +85,8 @@ export default function Footer() {
 }
 
 const FooterSection = ({ title, children }) => (
-  <div className="space-y-6">
-    <h5 className="text-base font-semibold text-gray-100 tracking-wide">
+  <div className="space-y-8">
+    <h5 className="text-xl font-semibold text-gray-100 tracking-tight">
       {title}
     </h5>
     {children}
@@ -96,12 +99,12 @@ const FooterIconLink = ({ href, src, alt, ariaLabel }) => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label={ariaLabel}
-    className="p-2.5 rounded-xl hover:bg-gray-800/50 transition-colors duration-300"
+    className="p-3 rounded-xl hover:bg-gray-800 transition-colors duration-300"
   >
     <img
       src={src}
       alt={alt}
-      className="w-7 h-7 opacity-80 hover:opacity-100 transition-opacity"
+      className="w-8 h-8 opacity-80 hover:opacity-100 transition-opacity"
     />
   </a>
 );

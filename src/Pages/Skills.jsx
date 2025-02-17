@@ -3,11 +3,18 @@ import { useState } from "react";
 const skillsData = [
   {
     title: "Programming Languages",
-    items: ["C#", "SQL", "XAML", "HTML", "CSS", "JavaScript"],
+    items: ["C#", "SQL", "JavaScript", "XAML", "HTML", "CSS"],
   },
   {
     title: "Frameworks",
-    items: [".NET 8", ".NET Framework", "Angular (Beginner)"],
+    items: [
+      ".NET 8",
+      ".NET Framework(4.x)",
+      "React JS",
+      "Bootstrap",
+      "Tailwind",
+      "Angular JS (Beginner)",
+    ],
   },
   {
     title: ".NET Technologies",
@@ -31,7 +38,6 @@ const skillsData = [
       "Azure Cloud Services",
       "Postman",
       "Git",
-      "React",
     ],
   },
   {
