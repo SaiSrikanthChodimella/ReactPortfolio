@@ -35,27 +35,25 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <section className="bg-gray-50/90 py-20 px-6 backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto">
-        <Header />
-        <div className="mt-16 grid gap-12">
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={index} {...exp} />
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto">
+      <Header />
+      <div className="mt-16 grid gap-12">
+        {experiences.map((exp, index) => (
+          <ExperienceCard key={index} {...exp} />
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
 
 function Header() {
   return (
     <header className="text-center mb-20">
-      <h1 className="text-5xl font-semibold text-gray-900 mb-4">
+      <h1 className="text-5xl font-semibold text-gray-300 mb-4">
         Career Highlights & Achievements
         <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
       </h1>
-      <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-xl text-gray-500 mt-6 max-w-2xl mx-auto leading-relaxed">
         Driving innovation through technical expertise, problem-solving, and
         continuous learning
       </p>

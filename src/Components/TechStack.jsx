@@ -38,28 +38,25 @@ const duplicatedTechStack = [...techStack, ...techStack];
 
 export default function TechStack() {
   return (
-    <section className="bg-gray-50/90 backdrop-blur-lg py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
-            Technology Stack & Expertise
-            <div className="mt-6 h-1 sm:h-1.5 w-20 sm:w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-          </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Empowering digital innovation with cutting-edge tools and
-            technologies
-          </p>
-        </div>
+    <div className="max-w-6xl mx-auto rounded-full">
+      <div className="text-center mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-300 mb-4">
+          Technology Stack & Expertise
+          <div className="mt-6 h-1 sm:h-1.5 w-20 sm:w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Empowering digital innovation with cutting-edge tools and technologies
+        </p>
+      </div>
 
-        <div className="relative overflow-hidden">
-          <div className="flex animate-infinite-scroll gap-4 sm:gap-6 md:gap-8 hover:animation-pause">
-            {duplicatedTechStack.map((tech, index) => (
-              <TechCard key={index} icon={tech.icon} name={tech.name} />
-            ))}
-          </div>
+      <div className="relative overflow-hidden">
+        <div className="flex animate-infinite-scroll gap-4 sm:gap-6 md:gap-8 hover:animation-pause">
+          {duplicatedTechStack.map((tech, index) => (
+            <TechCard key={index} icon={tech.icon} name={tech.name} />
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

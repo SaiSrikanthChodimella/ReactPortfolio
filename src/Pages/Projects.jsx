@@ -91,48 +91,45 @@ const projectData = [
 
 export default function Projects() {
   return (
-    <section className="bg-gray-50/90 py-20 px-6 backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-4">
-            Projects
-            <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Building cutting-edge solutions with modern engineering and
-            innovation
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectData.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center px-8 py-4 text-base font-medium text-gray-900 hover:text-white rounded-2xl hover:bg-gray-900 transition-all duration-300 group"
-          >
-            Explore All Projects
-            <svg
-              className="w-5 h-5 ml-3 opacity-0 group-hover:opacity-100 transition-opacity"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </a>
-        </div>
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-semibold text-gray-300 mb-4">
+          Projects
+          <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+        </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Building cutting-edge solutions with modern engineering and innovation
+        </p>
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projectData.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+
+      <div className="mt-16 text-center">
+        <a
+          href="#"
+          className="inline-flex items-center px-8 py-4 text-base font-medium text-gray-300 hover:text-white rounded-2xl hover:bg-gray-900 transition-all duration-300 group"
+        >
+          Explore All Projects
+          <svg
+            className="w-5 h-5 ml-3 opacity-0 group-hover:opacity-100 transition-opacity"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
   );
 }
 

@@ -26,26 +26,24 @@ const universities = [
 
 export default function Education() {
   return (
-    <section className="bg-gray-50/50 py-20 px-6 backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-4">
-            Academic Journey
-            <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A strong educational foundation fueling innovation and technical
-            excellence
-          </p>
-        </div>
-
-        <div className="grid gap-12">
-          {universities.map((uni, index) => (
-            <UniversityCard key={index} {...uni} />
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-semibold text-gray-300 mb-4">
+          Academic Journey
+          <div className="mt-6 h-[3px] w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+        </h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          A strong educational foundation fueling innovation and technical
+          excellence
+        </p>
       </div>
-    </section>
+
+      <div className="grid gap-12">
+        {universities.map((uni, index) => (
+          <UniversityCard key={index} {...uni} />
+        ))}
+      </div>
+    </div>
   );
 }
 

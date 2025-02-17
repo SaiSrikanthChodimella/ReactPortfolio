@@ -52,30 +52,28 @@ export default function SkillsSection() {
     setOpenSkill(openSkill === index ? null : index);
 
   return (
-    <section className="bg-gray-50/50 py-20 px-6 backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-4">
-            Technical Expertise
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A diverse skillset driving impactful and future-ready digital
-            solutions
-          </p>
-        </div>
-
-        <div className="space-y-6">
-          {skillsData.map((skill, index) => (
-            <SkillItem
-              key={index}
-              skill={skill}
-              isOpen={openSkill === index}
-              onClick={() => toggleSkill(index)}
-            />
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-semibold text-gray-300 mb-4">
+          Technical Expertise
+        </h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          A diverse skillset driving impactful and future-ready digital
+          solutions
+        </p>
       </div>
-    </section>
+
+      <div className="space-y-6">
+        {skillsData.map((skill, index) => (
+          <SkillItem
+            key={index}
+            skill={skill}
+            isOpen={openSkill === index}
+            onClick={() => toggleSkill(index)}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 

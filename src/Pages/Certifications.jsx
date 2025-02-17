@@ -2,7 +2,7 @@ import Certificate from "../assets/Certification.png";
 
 export default function Certifications() {
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-12">
+    <section className="bg-gray-50 py-20 md:px-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Certificate Image */}
         <div className="relative group">

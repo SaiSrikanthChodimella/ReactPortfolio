@@ -3,44 +3,37 @@ import TechStack from "../Components/TechStack";
 
 export default function AboutMe() {
   return (
-    <div className="bg-gray-50/90 py-20 backdrop-blur-lg min-h-screen p-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl transform rotate-2 group-hover:rotate-1 transition-all duration-300" />
-            <div className="relative z-10 bg-white rounded-2xl shadow-lg p-6 border border-gray-100/50">
-              <ProfileImage />
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <NameTitle />
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
-              <AboutDescription />
-            </div>
+    <div className="max-w-7xl mx-auto">
+      {/* Hero Section */}
+      <div className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16">
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl transform rotate-2 group-hover:rotate-1 transition-all duration-300" />
+          <div className="relative z-10 bg-white rounded-2xl shadow-lg p-6 border border-gray-100/50">
+            <ProfileImage />
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="space-y-8">
+          <NameTitle />
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
-            <ProfessionalQuote />
-          </div>
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
-            <KeySkills />
+            <AboutDescription />
           </div>
         </div>
+      </div>
 
-        {/* Action Section */}
+      {/* Content Grid */}
+      <div className="grid md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
-          <CallToAction />
+          <ProfessionalQuote />
         </div>
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+          <KeySkills />
+        </div>
+      </div>
 
-        {/* Tech Stack */}
-        <div className="mt-16 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
-          <TechStack />
-        </div>
+      {/* Action Section */}
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-gray-100/50">
+        <CallToAction />
       </div>
     </div>
   );
@@ -84,14 +77,14 @@ function ProfessionalQuote() {
 function NameTitle() {
   return (
     <div className="space-y-6">
-      <h1 className="text-5xl font-bold text-gray-900 tracking-tight">
+      <h1 className="text-5xl font-bold text-gray-100 tracking-tight">
         Sai Srikanth Chodimella
       </h1>
       <div className="flex flex-wrap gap-3">
         <span className="px-4 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-full">
           .NET Developer
         </span>
-        <span className="px-4 py-1.5 bg-gray-100/50 text-gray-600 text-sm font-medium rounded-full border border-gray-200/50">
+        <span className="px-4 py-1.5 bg-gray-100 text-gray-900 text-sm font-medium rounded-full border border-gray-200/50">
           Full Stack Developer
         </span>
       </div>
