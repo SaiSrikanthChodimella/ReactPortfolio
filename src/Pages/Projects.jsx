@@ -2,19 +2,20 @@ import Monsters from "../assets/Project.png";
 import UnderGoing from "../assets/Under_Construction.png";
 import Resume from "../assets/Resume.png";
 import Programming from "../assets/Programming.png";
+import AnimalPredictionApp from "../assets/AnimalPredictionApp.png";
 
 const projectData = [
   {
     img: Monsters,
-    title: "Project Monster Builder",
+    title: "Monster Builder Platform",
     description:
-      "Currently optimizing application performance and testing new UI component libraries.",
+      "Enterprise-grade monster configuration system with full-stack capabilities",
     details: [
-      "Developed RESTful API for backend and a Blazor web app with Bootstrap for frontend UI/UX.",
-      "Built APIs with ASP.NET Core Minimal API.",
-      "Implemented Unit and Integration tests using xUnit and Moq.",
-      "Integrated OAuth 2.0 and OpenID for Authentication/Authorization.",
-      "Used Entity Framework Core for Azure SQL Database.",
+      "Backend Built using ASP.NET Core Web API",
+      "Frontend Built with Blazor and Bootstrap for responsive and modern UI/UX",
+      "Azure SQL DB and Entity Framework core as ORM Framework",
+      "Project Repo maintained on Azure Repositories",
+      "Deployed both the applications on Azure App services",
     ],
     links: [
       {
@@ -30,38 +31,39 @@ const projectData = [
     ],
   },
   {
-    img: Resume,
-    title: "Portfolio Web Page in .NET Ecosystem",
-    description:
-      "Utilized Microsoft Technologies to build this Portfolio Web Page.",
+    img: AnimalPredictionApp,
+    title: "Animal Recognition AI",
+    description: "Machine learning-powered image classification interface",
     details: [
-      "Utilized Bootstrap for quick and responsive design.",
-      "Utilized Animate.CSS for smooth animations.",
-      "Sourcecode hosted on Azure DevOps.",
-      "Deployed on Azure App Service.",
+      "Frontend built with React.js and Tailwind CSS for clean and modern interface",
+      "Utilized  Axios for secure HTTP communication",
+      "Colloboration project with ML Engineer",
+      "Project Repo maintained on GitHub",
+      "Deployed application on Vercel",
     ],
     links: [
       {
-        text: "Portfolio Repo",
-        href: "https://dev.azure.com/srikanthchodimella/MonsterBuilder/_git/Portfolio%20WebSite",
+        text: "Project Repo",
+        href: "https://github.com/SaiSrikanthChodimella/prediction_project",
         color: "blue",
       },
       {
         text: "Live Page",
-        href: "https://saisrikanthchodimella.azurewebsites.net/",
+        href: "https://animalpredictionai.vercel.app/",
         color: "green",
       },
     ],
   },
   {
     img: Programming,
-    title: "C# .NET Notes",
-    description: "A C# .NET Handbook",
+    title: ".NET Developer Handbook",
+    description: "Interactive C# programming reference guide",
     details: [
-      "Built using React Java Script",
-      "Utilized Taiwlind CSS 4.0.3 ",
-      "in Beta Phase",
-      "Hosted on GitHub Pages",
+      "Built documentation site with React.js and Tailwind CSS",
+      "Constantly on Improvement Cycle",
+      "Organized content hierarchy for optimal readability",
+      "Project Repo maintained on GitHub",
+      "Deployed on GitHub Pages",
     ],
     links: [
       {
@@ -72,6 +74,31 @@ const projectData = [
       {
         text: "Live Page",
         href: "https://saisrikanthchodimella.github.io/LearnCSharp/",
+        color: "green",
+      },
+    ],
+  },
+  {
+    img: Resume,
+    title: "Developer Portfolio Platform",
+    description: "Professional showcase built on Microsoft ecosystem",
+    details: [
+      "Another Responsive Portfolio Site with .NET capabilities",
+      "Frontend Built with Blazor and Bootstrap for responsive and modern UI/UX",
+      "Integrated smooth animations with Animate.css library",
+      "Deployed on Azure Websites",
+      "Project Repo maintained on Azure Repositories",
+      "Deployed on Azure Websites",
+    ],
+    links: [
+      {
+        text: "Portfolio Repo",
+        href: "https://dev.azure.com/srikanthchodimella/MonsterBuilder/_git/Portfolio%20WebSite",
+        color: "blue",
+      },
+      {
+        text: "Live Page",
+        href: "https://saisrikanthchodimella.azurewebsites.net/",
         color: "green",
       },
     ],
@@ -112,7 +139,9 @@ export default function Projects() {
 
         <div className="mt-16 text-center">
           <a
-            href="#"
+            href="https://github.com/SaiSrikanthChodimella"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 text-base font-medium text-gray-900 hover:text-white rounded-2xl hover:bg-gray-900 transition-all duration-300 group"
           >
             Explore All Projects
