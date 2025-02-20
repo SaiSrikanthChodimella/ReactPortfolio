@@ -11,7 +11,7 @@ const experiences = [
       "Implemented a Recently Used Files menu to enhance workflow efficiency",
       "Redesigned forms for a fully responsive user interface",
       "Refactored and optimized code using SOLID principles, MVVM/MVC, and design patterns, improving maintainability and scalability",
-      " and resolved critical bugs while increasing unit test coverage with NUnit and Moq, enhancing stability.",
+      "Resolved critical bugs while increasing unit test coverage with NUnit and Moq, enhancing stability.",
       "Developed a Digital Twin communication module to support real-world system simulations for better testing and validation.",
       "Optimized 3D CAD models to improve rendering efficiency and seamless integration with simulations.",
     ],
